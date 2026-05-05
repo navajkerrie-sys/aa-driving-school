@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `bookings` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`customerName` varchar(128) NOT NULL,\n\t`customerEmail` varchar(320) NOT NULL,\n\t`customerPhone` varchar(20) NOT NULL,\n\t`courseType` enum('beginner','intermediate','advanced','defensive','refresher') NOT NULL,\n\t`preferredDate` varchar(20) NOT NULL,\n\t`preferredTime` varchar(10) NOT NULL,\n\t`notes` text,\n\t`status` enum('pending','confirmed','cancelled','completed') NOT NULL DEFAULT 'pending',\n\t`paymentStatus` enum('unpaid','pending','paid','failed') NOT NULL DEFAULT 'unpaid',\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `bookings_id` PRIMARY KEY(`id`)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 27fGHDuBg9GBXVd.root --database Weg8CvPFa3ZLHC2BDVdwrr --execute CREATE TABLE `bookings` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`customerName` varchar(128) NOT NULL,\n\t`customerEmail` varchar(320) NOT NULL,\n\t`customerPhone` varchar(20) NOT NULL,\n\t`courseType` enum('beginner','intermediate','advanced','defensive','refresher') NOT NULL,\n\t`preferredDate` varchar(20) NOT NULL,\n\t`preferredTime` varchar(10) NOT NULL,\n\t`notes` text,\n\t`status` enum('pending','confirmed','cancelled','completed') NOT NULL DEFAULT 'pending',\n\t`paymentStatus` enum('unpaid','pending','paid','failed') NOT NULL DEFAULT 'unpaid',\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `bookings_id` PRIMARY KEY(`id`)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 985
+}

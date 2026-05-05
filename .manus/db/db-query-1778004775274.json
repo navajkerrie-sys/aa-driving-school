@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `payments` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`bookingId` int NOT NULL,\n\t`mpesaPhone` varchar(20) NOT NULL,\n\t`amount` decimal(10,2) NOT NULL,\n\t`checkoutRequestId` varchar(128),\n\t`merchantRequestId` varchar(128),\n\t`mpesaReceiptNumber` varchar(64),\n\t`status` enum('initiated','pending','completed','failed','cancelled') NOT NULL DEFAULT 'initiated',\n\t`resultCode` varchar(10),\n\t`resultDesc` text,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `payments_id` PRIMARY KEY(`id`)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 27fGHDuBg9GBXVd.root --database Weg8CvPFa3ZLHC2BDVdwrr --execute CREATE TABLE `payments` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`bookingId` int NOT NULL,\n\t`mpesaPhone` varchar(20) NOT NULL,\n\t`amount` decimal(10,2) NOT NULL,\n\t`checkoutRequestId` varchar(128),\n\t`merchantRequestId` varchar(128),\n\t`mpesaReceiptNumber` varchar(64),\n\t`status` enum('initiated','pending','completed','failed','cancelled') NOT NULL DEFAULT 'initiated',\n\t`resultCode` varchar(10),\n\t`resultDesc` text,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `payments_id` PRIMARY KEY(`id`)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 119
+}
